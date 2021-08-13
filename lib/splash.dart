@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+
 import 'package:myapp2/main.dart';
+import 'package:myapp2/screens/india/indiaScreen.dart';
+import 'package:myapp2/screens/mainScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   final Color backgroundColor = Colors.white;
@@ -29,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigationPage() {
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (BuildContext context) => Homepage()));
+        MaterialPageRoute(builder: (BuildContext context) => MainScreen()));
   }
 
   @override
