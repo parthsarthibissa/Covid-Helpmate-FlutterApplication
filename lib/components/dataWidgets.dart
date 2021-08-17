@@ -11,10 +11,9 @@ class TodayDataWidget extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
         height: size.height * 0.2,
-        width: size.width - 50,
+        width: size.width,
         decoration: BoxDecoration(
-            color: Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(25)),
+            color: Colors.white60, borderRadius: BorderRadius.circular(25)),
         child: Column(children: [
           Mytext(
             text: 'Today',
@@ -87,10 +86,9 @@ class AvgData extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.55,
-      width: size.width - 50,
-      decoration: BoxDecoration(
-          color: color.withOpacity(0.75),
-          borderRadius: BorderRadius.circular(25)),
+      width: size.width,
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(25)),
       child: ListView(
         padding: EdgeInsets.all(15),
         children: [

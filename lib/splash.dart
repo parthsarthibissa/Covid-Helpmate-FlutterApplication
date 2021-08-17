@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp2/main.dart';
 import 'package:myapp2/screens/india/indiaScreen.dart';
 import 'package:myapp2/screens/mainScreen.dart';
+import 'package:myapp2/services/countryService.dart';
 
 class SplashScreen extends StatefulWidget {
   final Color backgroundColor = Colors.white;

@@ -11,10 +11,9 @@ class ChartContainer extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.37,
-      width: size.width - 45,
-      decoration: BoxDecoration(
-          color: color.withOpacity(0.65),
-          borderRadius: BorderRadius.circular(25)),
+      width: size.width,
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(25)),
       child: ChartBar(
           text: 'Active',
           deaths: data.deaths,

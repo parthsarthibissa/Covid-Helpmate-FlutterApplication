@@ -13,7 +13,7 @@ class Mytext extends StatelessWidget {
     return AutoSizeText(
       this.text,
       textAlign: TextAlign.center,
-      style: GoogleFonts.balooThambi(
+      style: GoogleFonts.montserrat(
           color: color, fontSize: size, fontWeight: weight),
     );
   }
