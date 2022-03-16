@@ -34,7 +34,7 @@ class _ChartBarState extends State<ChartBar> {
               color: Colors.white24, borderRadius: BorderRadius.circular(25)),
           height: size.height * 0.25,
           margin: EdgeInsets.all(20),
-          width: size.width / 2,
+          width: size.width / 2.35,
           child: fl.PieChart(
               fl.PieChartData(
                   borderData: fl.FlBorderData(show: false),
