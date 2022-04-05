@@ -7,10 +7,6 @@ import 'package:myapp2/screens/mainScreen.dart';
 import 'package:myapp2/services/countryService.dart';
 
 class SplashScreen extends StatefulWidget {
-  final Color backgroundColor = Colors.white;
-  final TextStyle styleTextUnderTheLoader = TextStyle(
-      fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black);
-
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -70,18 +66,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       Container(
                         height: 10,
                       ),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: <Widget>[
-                            Spacer(),
-                            Text(_versionName),
-                            Spacer(
-                              flex: 4,
-                            ),
-                            Text('Stay Home Stay Safe'),
-                            Spacer(),
-                          ])
-                    ],
+                            Text('Wear Mask, Stay Safe'),
+                      ],
                   ),
                 ),
               ],

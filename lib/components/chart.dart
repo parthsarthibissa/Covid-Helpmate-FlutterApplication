@@ -25,7 +25,7 @@ class _ChartBarState extends State<ChartBar> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
+    print('cases' + widget.cases.toString());
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
@@ -39,7 +39,8 @@ class _ChartBarState extends State<ChartBar> {
               fl.PieChartData(
                   borderData: fl.FlBorderData(show: false),
                   sectionsSpace: 0,
-                  startDegreeOffset: 120,
+                  centerSpaceRadius: 10,
+                  startDegreeOffset: 100,
                   sections: [
                     fl.PieChartSectionData(
                         color: Colors.green,
@@ -68,12 +69,14 @@ class _ChartBarState extends State<ChartBar> {
               Mytext(
                 text: widget.recovered.toString(),
                 color: Colors.green,
+                weight: FontWeight.w600,
                 size: 22,
               ),
               Mytext(size: 18, text: 'Recovered'),
               Mytext(
                 size: 22,
-                text: widget.active.toString(),
+                weight: FontWeight.w600,
+                text: widget.cases.toString(),
                 color: Colors.yellow,
               ),
               Mytext(
@@ -82,6 +85,7 @@ class _ChartBarState extends State<ChartBar> {
               ),
               Mytext(
                 size: 22,
+                weight: FontWeight.w600,
                 text: widget.deaths.toString(),
                 color: Colors.red,
               ),

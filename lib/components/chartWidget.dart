@@ -10,7 +10,7 @@ class ChartContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.37,
+      height: size.height * 0.4,
       width: size.width,
       decoration:
           BoxDecoration(color: color, borderRadius: BorderRadius.circular(25)),

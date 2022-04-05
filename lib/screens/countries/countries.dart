@@ -27,105 +27,54 @@ class _CountriesState extends State<Countries> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SafeArea(
-        child: Container(
-            decoration: BoxDecoration(
-                color: Colors.white70,
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    alignment: Alignment.center,
-                    image: NetworkImage(
-                        'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29ybGQlMjBtYXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'))),
-            child: Stack(children: [
-              Align(
-                  alignment: Alignment.center,
-                  heightFactor: 4,
-                  widthFactor: 5,
-                  child: Mytext(
-                    text: "COUNTRY",
-                    size: 50,
-                    color: Colors.white,
-                  )),
-              WaveWidget(
-                config: CustomConfig(
-                  gradients: [
-                    [Colors.yellow, Colors.transparent, Colors.blue],
-                    [Colors.orange, Colors.transparent, Colors.green],
-                    [Colors.red, Colors.transparent, Colors.indigo],
-                  ],
-                  durations: [5000, 5000, 5000],
-                  heightPercentages: [0.18, 0.42, 0.75],
-                  gradientBegin: Alignment.bottomLeft,
-                  gradientEnd: Alignment.topRight,
-                ),
-                waveAmplitude: 0,
-                size: Size(size.width, size.height * 0.28),
-              ),
-              Scaffold(
-                backgroundColor: Colors.transparent,
-                body: Center(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Container(
-                            height: size.height * 0.1,
-                            width: size.width,
-                            padding: EdgeInsets.all(20),
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(25)),
-                            child: TextField(
-                              inputFormatters: [
-                                FilteringTextInputFormatter.allow(
-                                    RegExp("[a-zA-Z]")),
-                              ],
-                              enabled: true,
-                              controller: _controller,
-                              decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.all(15),
-                                  focusColor: Colors.white,
-                                  icon: Icon(FontAwesomeIcons.globe),
-                                  border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(25)),
-                                  hintStyle: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                  errorText: _validate
-                                      ? 'Value Can\'t Be Empty'
-                                      : null,
-                                  hintText: 'Country Name'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 25,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            print('C' + _controller.text);
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (builder) {
-                              return CountryDataScreen(
-                                countryName: _controller.text,
-                              );
-                            }));
-                          },
-                          child: Container(
-                              alignment: Alignment.center,
-                              height: size.height * 0.05,
-                              width: size.width * 0.5,
-                              decoration: BoxDecoration(
-                                  color: Colors.yellow,
-                                  borderRadius: BorderRadius.circular(25)),
-                              child: Mytext(
-                                text: 'Search',
-                                size: 20,
-                              )),
-                        )
-                      ]),
-                ),
-              )
-            ])));
+      child: Scaffold(
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: TextField(
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp("[a-zA-Z]")),
+              ],
+              enabled: true,
+              controller: _controller,
+              decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.lightGreen.shade300,
+                  contentPadding: EdgeInsets.all(15),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25)),
+                  hintStyle: TextStyle(color: Colors.black, fontSize: 20),
+                  errorText: _validate ? 'Value Can\'t Be Empty' : null,
+                  hintText: 'Country Name'),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          InkWell(
+            onTap: () {
+              print('C' + _controller.text);
+              Navigator.of(context).push(MaterialPageRoute(builder: (builder) {
+                return CountryDataScreen(
+                  countryName: _controller.text,
+                );
+              }));
+            },
+            child: Container(
+                alignment: Alignment.center,
+                height: size.height * 0.075,
+                width: size.width * 0.5,
+                decoration: BoxDecoration(
+                    color: Colors.lightGreen.shade700,
+                    borderRadius: BorderRadius.circular(25)),
+                child: Mytext(
+                  text: 'Search',
+                  color: Colors.white,
+                  size: 20,
+                )),
+          )
+        ]),
+      ),
+    );
   }
 }
