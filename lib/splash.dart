@@ -53,8 +53,9 @@ class _SplashScreenState extends State<SplashScreen> {
                         scale: 0.2,
                         width: 200,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
+                      Text(
+                        "COVID HELPMATE",
+                        style: TextStyle(fontSize: 22),
                       ),
                     ],
                   )),
@@ -66,8 +67,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       Container(
                         height: 10,
                       ),
-                            Text('Wear Mask, Stay Safe'),
-                      ],
+                      Text('Wear Mask, Stay Safe'),
+                    ],
                   ),
                 ),
               ],

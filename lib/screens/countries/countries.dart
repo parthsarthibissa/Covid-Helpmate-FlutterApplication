@@ -69,7 +69,7 @@ class _CountriesState extends State<Countries> {
                     borderRadius: BorderRadius.circular(25)),
                 child: Mytext(
                   text: 'Search',
-                  color: Colors.white,
+                 
                   size: 20,
                 )),
           )

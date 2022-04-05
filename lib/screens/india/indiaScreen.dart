@@ -16,7 +16,7 @@ class IndiaScreen extends StatelessWidget {
         body: SingleChildScrollView(
             padding: EdgeInsets.all(15),
             child: FutureBuilder(
-              future: IndiaService().getIndiaApi(),
+              future: IndiaService().getIndiaApi(context),
               builder: (builder, snapshot) {
                 if (!snapshot.hasData) {
                   return Center(

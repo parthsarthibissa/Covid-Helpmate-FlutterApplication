@@ -17,7 +17,7 @@ class WorldScreen extends StatelessWidget {
         child: SingleChildScrollView(
           padding: EdgeInsets.all(15),
           child: FutureBuilder(
-            future: WorldService().getWorldApi(),
+            future: WorldService().getWorldApi(context),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return Center(
