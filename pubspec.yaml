@@ -26,17 +26,17 @@ dependencies:
   country_list_pick: ^1.0.1+5
   cupertino_icons: ^1.0.4
   dio: ^4.0.0
-  fl_chart: ^0.46.0
+  fl_chart: ^0.55.1
   flag: ^6.0.0
   floating_bottom_navigation_bar: ^1.5.2
   flutter:
     sdk: flutter
   fluttertoast: ^8.0.9
-  font_awesome_flutter: ^9.1.0
-  google_fonts: ^2.1.0
+  font_awesome_flutter: ^10.1.0
+  google_fonts: ^3.0.1
   provider: ^6.0.2
   shared_preferences: ^2.0.13
-  syncfusion_flutter_charts: ^19.2.55
+  syncfusion_flutter_charts: ^20.2.40
   wave: ^0.2.0
 
 dev_dependencies:

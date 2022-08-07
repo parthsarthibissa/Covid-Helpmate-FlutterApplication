@@ -45,20 +45,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 Expanded(
                   flex: 7,
                   child: Container(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image.asset(
-                        'starfiles/coronavirus.png',
-                        scale: 0.2,
-                        width: 200,
-                      ),
-                      Text(
-                        "COVID HELPMATE",
-                        style: TextStyle(fontSize: 22),
-                      ),
-                    ],
-                  )),
+                    child: Image.asset(
+                      'starfiles/coronavirus.png',
+                      scale: 0.2,
+                      width: 200,
+                    ),
+                  ),
                 ),
                 Expanded(
                   child: Column(

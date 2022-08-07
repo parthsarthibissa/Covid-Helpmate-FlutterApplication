@@ -12,7 +12,7 @@ class TodayDataWidget extends StatelessWidget {
     return Container(
       height: size.height * 0.25,
       width: size.width,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
           color: Colors.transparent, borderRadius: BorderRadius.circular(25)),
       child: ListView(
@@ -165,7 +165,7 @@ class AvgData extends StatelessWidget {
           BoxDecoration(color: color, borderRadius: BorderRadius.circular(25)),
       child: ListView(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.all(15),
+        // padding: EdgeInsets.all(15),
         children: [
           DetailTile(
             metadata: 'Cases',
